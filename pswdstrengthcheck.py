@@ -12,7 +12,7 @@ commonpswd= {
     "aaaaaa", "ginger", "princess", "joshua", "cheese", "amanda", "summer", "love",
     "ashley", "nicole", "password123", "matthew", "access", "yankees", "987654321", "dallas",
     "austin", "thunder", "taylor", "matrix", "welcome", "phoenix", "camaro", "silver",
-    "internet", "orange", "cookie", "maverick", "mercedes", "falcon",
+    "internet", "orange", "cookie", "maverick", "mercedes", "falcon", "hello123", "hello@123"
 }
 
 def main():
@@ -65,13 +65,13 @@ def spclcharcheck(pswd):
     return False
 
 def scoreprint(score):
-    if score<3:
+    if score<5:
         print("Password strength is TOO WEAK")
-    elif score<5:
-        print("Password strength is WEAK")
     elif score<8:
+        print("Password strength is WEAK")
+    elif score<10:
         print("Password strength is MEDIUM")
-    elif score>=8:
+    elif score>=10:
         print("Password strength is STRONG")
 
 main()
