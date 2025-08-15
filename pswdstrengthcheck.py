@@ -20,6 +20,8 @@ def main():
     score=10
     if len(password)<8:
         sys.exit("Too short")
+    if password.lower() in commonpswd:
+        sys.exit("Too common")
     if len(password)>12:
         score+=2
     if not uppercheck(password):
@@ -34,8 +36,6 @@ def main():
     if not spclcharcheck(password):
         score-=2
         print("Need at least one special character")
-    if password.lower() in commonpswd:
-        sys.exit("Too common")
     print("\nPassword complexity:")
     scoreprint(score)
 
